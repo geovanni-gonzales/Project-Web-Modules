@@ -1,0 +1,78 @@
+*, *::before, *::after, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    content: "";
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 2000px;
+    margin: auto;
+    header{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0; //-Agregado para otros navegadores
+        
+        padding: 20px;
+        color: white;
+        background: url(images/jump-1461111_1920.jpg);
+        background-attachment: fixed;
+        
+        height: 100vh;
+        align-items: center;
+        //Animacion con js----------------
+        background-size: 100% 100%;
+        //--------------------------------
+        
+        &:before{
+            position: absolute;
+            top: 0;
+            right: 0; 
+            content: "";
+            width: 100%;
+            height: 100%; 
+            background: 
+                radial-gradient(
+                    ellipse at 50% 100%,
+                    rgba(92, 143, 128 , 0.7) 60%,
+                    rgba(26, 116, 112, 1) 100%
+                );
+            //opacity: 0.5;
+        }
+        
+        & > h1{
+            position: relative;//para darle un index z de uno
+            width: 40%;
+            margin-top: 60px;
+            border-radius: 10px;
+            line-height: 3;
+            font-size: 2em;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .3);
+        }
+        
+        nav.main_nav{
+            position: relative;//para darle un index z de uno
+            width: 80%;
+            margin-top: 60px;
+            & > ul.ul_main{
+                list-style: none;
+                display: flex;
+                & > li{
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 10px;
+                    margin: 2px;
+                    padding: 10px;
+                    width: 33.33%;
+                    align-items: center;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, .2);
+                }
+            }
+        }
+    }
+}
