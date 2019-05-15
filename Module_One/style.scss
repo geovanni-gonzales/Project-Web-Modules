@@ -11,6 +11,7 @@
     max-width: 2000px;
     margin: auto;
     header{
+        // INICIO Imagen en el Header
         position: relative;
         display: flex;
         flex-direction: column;
@@ -25,8 +26,10 @@
         align-items: center;
         //Animacion con js----------------
         background-size: 100% 100%;
-        //--------------------------------
+        //-------------------------------- 
+        // FIN Imagen en el Header
         
+        // INICIO Degradado de la imagen de fondo del header con un before 
         &:before{
             position: absolute;
             top: 0;
@@ -42,7 +45,9 @@
                 );
             //opacity: 0.5;
         }
+        // INICIO Degradado de la imagen de fondo del header con un before
         
+        //INICIO de colo forma y centrado del H1
         & > h1{
             position: relative;//para darle un index z de uno
             width: 40%;
@@ -53,7 +58,9 @@
             text-align: center;
             background-color: rgba(0, 0, 0, .3);
         }
+        //INICIO de colo forma y centrado del H1
         
+        // INICIO de forma colo y centrado de los enlaces principales
         nav.main_nav{
             position: relative;//para darle un index z de uno
             width: 80%;
@@ -71,8 +78,78 @@
                     align-items: center;
                     text-align: center;
                     background-color: rgba(0, 0, 0, .2);
+                     & > a[class="nav home"], [class="nav bloc"], [class="nav secu"]{
+                        display: block;
+                        align-self: center;
+                        border-radius: 50%;
+                        border: 3px solid white;
+                        padding: 20px;
+                        margin-bottom: 20px;  
+                        font-size: 2.5em;
+                    }
+                    & > a > span{
+                        display: block;
+//                        @media screen and (max-width: 450px){
+//                            font-size: 8vw;
+//                        }
+                    }
+                    
+                    // INICIO del hover before creciente y decreciente el los enlaces icons
+                    & > a{
+                        text-decoration: none;
+                        font-weight: bold;
+                        color: White;
+//                        @media screen and (max-width: 550px){
+//                            font-size: 3vw;
+//                        }
+                    }
+                    & > a:first-child:hover{
+                        + a{
+                            position: relative;
+                            &:before{
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                content: "";
+                                display: block;
+                                width: 100%;
+                                height: 3px;
+                                background-color: white;
+                            }
+                        }
+                    }
+                    // FIN del hover before creciente y decreciente en los enlaces icons
+                    
+                    // INICIO del hover before creciente y decreciente en los enlaces de los tutulos
+                    & > a:nth-child(2){
+                        position: relative;
+                        //width: 115px;
+                        width: 100%;
+                        padding-bottom: 10px;
+                        &:before{
+                            position: absolute;
+                            bottom: 0;
+                            content: "";
+                            display: block;
+                            width: 0;
+                            height: 3px;
+                            transition: all .3s;
+                            left: 50%;
+                            background-color: white;
+                        }
+                        &:hover:before{
+                            width: 100%;
+                            left: 0;
+                        }
+                        //segundo cambio --------------------------------(7)
+                        @media screen and (max-width: 520px){
+                            //width: 100%;
+                        }
+                    }
+                    // FIN del hover before creciente y decreciente en los enlaces de los tutulos
                 }
             }
         }
+        // FIN de forma colo y centrado de los enlaces principales
     }
 }
