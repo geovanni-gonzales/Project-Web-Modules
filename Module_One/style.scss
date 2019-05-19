@@ -94,6 +94,19 @@
             font-size: 2em;
             text-align: center;
             background-color: rgba(0, 0, 0, .3);
+            
+            // INICIO Redimencionamiento de la pagina para navegacion movil con media queries
+            @media screen and (max-width: 1100px){
+                width: 70%;
+                margin-bottom: 0;
+            }
+            @media screen and (max-width: 650px){
+                width: 90%;
+            }
+            @media screen and (max-width: 470px){
+                line-height: 2;
+            }
+            // FIN Redimencionamiento de la pagina para navegacion movil con media queries
         }
         //INICIO de colo forma y centrado del H1
         
@@ -102,6 +115,9 @@
             position: relative;//para darle un index z de uno
             width: 80%;
             margin-top: 60px;
+            @media screen and (max-width: 860px){
+                width: 90%;
+            }
             & > ul.ul_main{
                 list-style: none;
                 display: flex;
@@ -126,9 +142,14 @@
                     }
                     & > a > span{
                         display: block;
-//                        @media screen and (max-width: 450px){
-//                            font-size: 8vw;
-//                        }
+                        @media screen and (max-width: 450px){
+                            font-size: 8vw;// establece texto resposive
+                        }
+                    }
+                    
+                    @media screen and (max-width: 520px){
+                        //padding: 2.4%;
+                        padding: 10px 0;
                     }
                     
                     // INICIO del hover before creciente y decreciente el los enlaces icons
@@ -136,9 +157,9 @@
                         text-decoration: none;
                         font-weight: bold;
                         color: White;
-//                        @media screen and (max-width: 550px){
-//                            font-size: 3vw;
-//                        }
+                        @media screen and (max-width: 550px){
+                            font-size: 3vw;
+                        }
                     }
                     & > a:first-child:hover{
                         + a{
