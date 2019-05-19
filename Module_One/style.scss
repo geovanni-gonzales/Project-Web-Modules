@@ -45,6 +45,8 @@
                 );
             //opacity: 0.5;
         }
+        // INICIO Degradado de la imagen de fondo del header con un before
+        
         // 3) Insertar configuracion del div=particles-js, absolute=para posicionar detras del div nav 
         #particles-js{
             position: absolute;
@@ -52,8 +54,35 @@
             right: 0;
             width: 100%;
             height: 100%;
+        }//---------------------------------
+        
+        
+        
+        
+        // INICIO Div de los enlaces de redes sociales
+        .box_socialheader{
+            position: relative;//para darle un index z de uno
+            display: flex;
+            justify-content: space-around;
+            align-self: flex-end;
+            margin-right: 15%;
+            width: 200px;
+            font-size: 1em;
+            margin-top: 60px; //-----------------(3)
+            & > div:first-child{
+                padding: 0 3px;
+            }
+            & > div{
+                border-radius: 50%;
+                text-align: center;
+                background-color: rgba(0, 0, 0, .3);
+                & > span{
+                    display: block;
+                    padding: 10px;
+                }
+            }
         }
-        // INICIO Degradado de la imagen de fondo del header con un before
+        // FIN Div de los enlaces de redes sociales
         
         //INICIO de colo forma y centrado del H1
         & > h1{
