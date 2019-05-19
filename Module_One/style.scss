@@ -45,6 +45,14 @@
                 );
             //opacity: 0.5;
         }
+        // 3) Insertar configuracion del div=particles-js, absolute=para posicionar detras del div nav 
+        #particles-js{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
         // INICIO Degradado de la imagen de fondo del header con un before
         
         //INICIO de colo forma y centrado del H1
@@ -147,6 +155,16 @@
                         }
                     }
                     // FIN del hover before creciente y decreciente en los enlaces de los tutulos
+                    
+                    & > p{
+                        margin: auto;
+                        padding: 10px 20px 0 20px;
+                        width: 100%;//PARA EXPLORER-------------------
+                        //width: 300px;
+                        @media screen and (max-width: 800px){
+                            display: none;
+                        }
+                    }
                 }
             }
         }
