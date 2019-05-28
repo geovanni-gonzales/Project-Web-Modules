@@ -4,6 +4,100 @@
     box-sizing: border-box;
     content: "";
 }
+//INICIO DEL MIXIN----------------
+@mixin modalCoins($color_hover){
+    //INICIO DEL MODAL
+    .box_coins{
+        //background-color: aqua;
+        & > ul.coins{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            //background-color: blue;
+            margin: 10px 0 30px;
+            & > li{
+                margin: 0 5px;
+                padding: 10px 15px;
+                border-radius: 3px;//cambio recomendado(2)
+                //background-color: blueviolet;
+                &:hover{
+                    background-color: $color_hover;
+                    //background-color: rgba(0, 0, 0, .9);
+                }
+            }
+            & > li > span{
+                display: block;//cambio recomendado(1)
+                //font-size: 30px;
+                font-size: 2em;
+                cursor: pointer;
+            }
+        }
+        & > div.modal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            //background-color: rgba(243, 238, 238, 0.80);
+            background-color: rgba(0, 0, 0, 0.25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            & > div.coin{
+                width: 10px;
+                height: 10px;
+                background-color: #ffffff;
+                box-shadow: 0 12px 15px 0 rgba(0,0,0,0.25);
+                border-radius: 3px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                & > div.qr > img{
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 0 !important;
+                }
+                & > h2, & > div.qr, & > div.box_address{//directamenete si ocultamos la imagen al cargar no funciona para el primer click pero si apartir del segundo.
+                    visibility: hidden;
+                    margin: 10px;
+                }
+            }
+            &.show{
+                visibility: visible;
+                transition-delay: .3s;
+                & > div.coin{
+                    //max-width: 350px;
+                    //width: 90%;
+                    width: 320px;
+                    height: 320px;
+                    visibility: visible;
+                    transition: width .3s, height .3s;
+                    & > h2, & > div.qr, & > div.box_address{
+                        visibility: visible;
+                        transition-delay: .3s;
+                        color: rgba(0,0,0,.6);
+                    }
+                    & > div.box_address > #address{
+                        background-color: rgba(0,0,0,.05);
+                        border: 0;
+                        border-radius: 3px;
+                        box-shadow: none;
+                        padding: 15px 0;
+                        color: rgba(0,0,0,.6);
+                        width: 300px;
+                        font-size: 12px;
+                        text-align: center
+                    }
+                }
+            }
+        }
+    }
+    //FIN DEL MODAL
+}
+//INICIO DEL MIXIN-------------------
 .container{
     background-color: aqua;
     height: 100vh;
@@ -17,6 +111,165 @@
         background-color: blue;
         height: 200px;
         flex-shrink: 0;
+        
+        //INICIO del Modulo de Navegacion Movil
+        nav.nav_movil{
+            background-color: antiquewhite;
+            background-color: transparent;
+            color: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            visibility: hidden;
+            //transition: background-color 1s, color 1s;
+            transition: background-color 0.8s cubic-bezier(1,0,1,0);
+            z-index: 100;
+            &.visible{
+                visibility: visible;
+                //background-color: rgba(255, 255, 255, 0.9);
+                background-color: white;
+                color: black;
+                img#i_author{
+                    opacity: 1;
+                }
+            }
+             ul.ul_movil{
+                list-style: none;
+                display: flex;
+                position: relative;
+                & > li > ul{
+                    display: flex;
+                    list-style: none;
+                }
+                & > li:not(:nth-child(2)){
+                    flex-grow: 1;
+                }
+                & > li:nth-child(2){
+                    flex-grow: 2;
+                }
+                 & > li, & > li > ul > li{//para que no afecte a los li de los iconos de monedas
+                    text-align: center;
+                    flex: auto;
+                    //font-weight: bold;
+                    & > a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+                & > li{
+                    padding: 2px;
+                    line-height: 50px;//line height no funciona con imagenes ya que no son textos
+                }
+                & > li:first-child, li:first-child + li{
+                    font-weight: bold;
+                }
+                & > li > span{
+                    font-size: 30px;//con 50px sale un centrado absoluto ya que la imagen mide de altura 50px
+                    line-height: 50px;
+                }
+                & > li > img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    opacity: 0;
+                    transition: opacity 1s;
+                }
+                & > li > div{
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    width: 100%;
+                    color: transparent;
+                    visibility: hidden;
+                    //display: none;
+                    transition: color 1s;
+                    line-height: normal;
+                    font-size: .85rem;
+                    h3{
+                        margin: 20px 0;
+                    }
+                    p{
+                        max-width: 400px;
+                        width: 80%;
+                        margin: auto;
+                        text-align: justify;
+                    }
+                    .internal_link{
+                        max-width: 400px;
+                        width: 80%;
+                        margin: auto;
+                        a{
+                            display: block;
+                            font-size: 1.2rem;
+                            padding: 5px 0;
+                            margin: 10px 0;
+                            padding: 10px;
+                            text-decoration: none;
+                            background-color: rgba(0, 0, 0, .9);
+                            transition: color 1s, background-color 1s;
+                            color: transparent;
+                            text-align: left;
+                            border-radius: 5px;
+                        }
+                    }  
+                    //INICIO DEL MODAL MIXIN
+                    @include modalCoins(rgba(0, 0, 0, .9));
+                    //FIN DEL MODAL MIXIN
+                }
+                & > li > code{
+                    visibility: hidden;
+                }
+                & > li > span, & > li > img{
+                    display: none;
+                }
+                @media screen and(max-width: 1000px){
+                    & > li > ul > li{
+                        border-bottom: 1px solid white;
+                        &:first-child{
+                            border-top: 1px solid white;
+                        }
+                        & > a{
+                            color: white;
+                            display: block;
+                            &:hover{
+                                background-color: rgba(0, 0, 0, 1);
+                            }
+                            
+                        }
+                    }
+                    & > li code, & > li > ul{
+                        display: none;
+                    }
+                    & > li > span, & > li > img{
+                        display: block;
+                    }
+                    & > li > span:hover, & > li > img{
+                        cursor: pointer;
+                        color: rgb(26, 116, 112);
+                    }
+                    & > li > div.toggle_image{
+                        background-color: rgba(0, 0, 0, .8);
+                        color: white;
+                        visibility: visible;
+                        & > .internal_link > a{
+                            color: white;
+                        }
+                    }
+                    & > li > span + ul.toggle_menu{
+                        position: absolute;
+                        display: block;
+                        //background-color: rgba(255, 255, 255, 1);
+                        background-color: rgba(0, 0, 0, .8);
+                        top: 100%;
+                        left: 0px;
+                        width: 100%;
+                    }
+                } 
+            }
+        }
+        //FIN del Modulo de Navegacion Movil
     }
     section{
         background-color: blueviolet;
