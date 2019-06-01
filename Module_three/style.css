@@ -1,0 +1,86 @@
+*, *::before, *::after, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  content: ""; }
+
+.container {
+  background-color: aqua;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .container header {
+    background-color: blue;
+    height: 200px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
+  .container section {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto; }
+    .container section.section_one {
+      background-color: #f3f5f7; }
+    .container section.section_two {
+      background-color: #e6eaee; }
+    .container section > article {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+      -webkit-box-shadow: 10px 0 15px -10px rgba(0, 0, 0, 0.4), -9px 0 15px -10px rgba(0, 0, 0, 0.4);
+      box-shadow: 10px 0 15px -10px rgba(0, 0, 0, 0.4), -9px 0 15px -10px rgba(0, 0, 0, 0.4);
+      /*--animacion JS de (H2, P) para las 2 secciones o articulos -----------------*/
+      /*--animacion JS-----------------*/ }
+      .container section > article.blockchain {
+        margin-top: -30px;
+        background-color: #f3f5f7;
+        position: relative; }
+      .container section > article > h2 {
+        margin: 60px auto 30px;
+        width: 70%;
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 200;
+        visibility: hidden;
+        -webkit-transform: translateX(20%);
+        -ms-transform: translateX(20%);
+        transform: translateX(20%);
+        color: white; }
+        .container section > article > h2.h2 {
+          visibility: visible;
+          color: #066b98;
+          -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+          transform: translateX(0);
+          -webkit-transition: all 1s;
+          -o-transition: all 1s;
+          transition: all 1s; }
+      .container section > article > p {
+        visibility: hidden;
+        width: 75%;
+        margin: 0 auto 30px;
+        -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+        transform: translateY(50px);
+        text-align: justify;
+        font-size: 1.1rem;
+        color: white; }
+        .container section > article > p.parf {
+          visibility: visible;
+          color: #808080;
+          -webkit-transform: translateY(0px);
+          -ms-transform: translateY(0px);
+          transform: translateY(0px);
+          -webkit-transition: all 1s;
+          -o-transition: all 1s;
+          transition: all 1s; }
+  .container footer {
+    background-color: brown;
+    height: 100px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
