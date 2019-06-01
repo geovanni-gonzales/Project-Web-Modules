@@ -17,7 +17,7 @@
   flex-direction: column; }
   .container header {
     background-color: blue;
-    height: 200px;
+    height: 100vh;
     -ms-flex-negative: 0;
     flex-shrink: 0; }
   .container section {
@@ -40,6 +40,148 @@
         margin-top: -30px;
         background-color: #f3f5f7;
         position: relative; }
+        .container section > article.blockchain > div.mainbox_author {
+          width: 250px;
+          height: 400px;
+          padding: 20px;
+          margin: 30px 0 20px 20px;
+          -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+          float: right;
+          text-align: center;
+          z-index: 50;
+          position: relative;
+          font-size: .8rem;
+          opacity: 0;
+          /*
+                    @media screen and(max-width: 1000px){
+                        display: none;
+                    }
+                    */ }
+          .container section > article.blockchain > div.mainbox_author.display {
+            opacity: 1;
+            -webkit-transition: all 0.7s cubic-bezier(1, 0, 1, 0);
+            -o-transition: all 0.7s cubic-bezier(1, 0, 1, 0);
+            transition: all 0.7s cubic-bezier(1, 0, 1, 0); }
+          .container section > article.blockchain > div.mainbox_author > img.photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: inline-block; }
+          .container section > article.blockchain > div.mainbox_author > h3 {
+            margin-top: 10px;
+            color: #344e5a; }
+          .container section > article.blockchain > div.mainbox_author > p {
+            margin: 15px 0; }
+          .container section > article.blockchain > div.mainbox_author > p + p {
+            text-align: left; }
+          .container section > article.blockchain > div.mainbox_author > ul {
+            list-style: none;
+            text-align: left; }
+            .container section > article.blockchain > div.mainbox_author > ul > li {
+              padding: 5px;
+              margin: 10px 0;
+              text-decoration: none;
+              background-color: #e6eaee; }
+              .container section > article.blockchain > div.mainbox_author > ul > li > a {
+                text-decoration: none;
+                color: #066b98; }
+          .container section > article.blockchain > div.mainbox_author .box_coins > ul.coins {
+            list-style: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            margin: 10px 0 30px; }
+            .container section > article.blockchain > div.mainbox_author .box_coins > ul.coins > li {
+              margin: 0 5px;
+              padding: 10px 15px;
+              border-radius: 3px; }
+              .container section > article.blockchain > div.mainbox_author .box_coins > ul.coins > li:hover {
+                background-color: #e6eaee; }
+            .container section > article.blockchain > div.mainbox_author .box_coins > ul.coins > li > span {
+              display: block;
+              font-size: 2em;
+              cursor: pointer; }
+          .container section > article.blockchain > div.mainbox_author .box_coins > div.modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.25);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            visibility: hidden; }
+            .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin {
+              width: 10px;
+              height: 10px;
+              background-color: #ffffff;
+              -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
+              box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
+              border-radius: 3px;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              text-align: center; }
+              .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.qr > img {
+                width: 150px;
+                height: 150px;
+                border-radius: 0 !important; }
+              .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > h2, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.qr, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.box_address {
+                visibility: hidden;
+                margin: 10px; }
+            .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show {
+              visibility: visible;
+              -webkit-transition-delay: .3s;
+              -o-transition-delay: .3s;
+              transition-delay: .3s; }
+              .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin {
+                width: 320px;
+                height: 320px;
+                visibility: visible;
+                -webkit-transition: width .3s, height .3s;
+                -o-transition: width .3s, height .3s;
+                transition: width .3s, height .3s; }
+                .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin > h2, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin > div.qr, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin > div.box_address {
+                  visibility: visible;
+                  -webkit-transition-delay: .3s;
+                  -o-transition-delay: .3s;
+                  transition-delay: .3s;
+                  color: rgba(0, 0, 0, 0.6); }
+                .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin > div.box_address > #address {
+                  background-color: rgba(0, 0, 0, 0.05);
+                  border: 0;
+                  border-radius: 3px;
+                  -webkit-box-shadow: none;
+                  box-shadow: none;
+                  padding: 15px 0;
+                  color: rgba(0, 0, 0, 0.6);
+                  width: 300px;
+                  font-size: 12px;
+                  text-align: center; }
+          @media screen and (max-width: 1000px) {
+            .container section > article.blockchain > div.mainbox_author#mainbox_author {
+              display: none; } }
       .container section > article > h2 {
         margin: 60px auto 30px;
         width: 70%;
@@ -79,6 +221,27 @@
           -webkit-transition: all 1s;
           -o-transition: all 1s;
           transition: all 1s; }
+      @media screen and (max-width: 1000px) {
+        .container section > article {
+          width: 90%; }
+          .container section > article > h2 {
+            width: 77%;
+            font-size: 2.1rem; }
+          .container section > article > p {
+            width: 85%;
+            font-size: 1rem; } }
+      @media screen and (max-width: 600px) {
+        .container section > article {
+          width: 98%; }
+          .container section > article.blockchain {
+            margin-top: 0px; }
+          .container section > article > h2 {
+            width: 90%;
+            font-size: 1.8rem;
+            margin: 30px auto 30px; }
+          .container section > article > p {
+            width: 90%;
+            font-size: 0.8rem; } }
   .container footer {
     background-color: brown;
     height: 100px;

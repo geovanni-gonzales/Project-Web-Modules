@@ -4,6 +4,100 @@
     box-sizing: border-box;
     content: "";
 }
+//INICIO DEL MIXIN----------------
+@mixin modalCoins($color_hover){
+    //INICIO DEL MODAL
+    .box_coins{
+        //background-color: aqua;
+        & > ul.coins{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            //background-color: blue;
+            margin: 10px 0 30px;
+            & > li{
+                margin: 0 5px;
+                padding: 10px 15px;
+                border-radius: 3px;//cambio recomendado(2)
+                //background-color: blueviolet;
+                &:hover{
+                    background-color: $color_hover;
+                    //background-color: rgba(0, 0, 0, .9);
+                }
+            }
+            & > li > span{
+                display: block;//cambio recomendado(1)
+                //font-size: 30px;
+                font-size: 2em;
+                cursor: pointer;
+            }
+        }
+        & > div.modal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            //background-color: rgba(243, 238, 238, 0.80);
+            background-color: rgba(0, 0, 0, 0.25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            & > div.coin{
+                width: 10px;
+                height: 10px;
+                background-color: #ffffff;
+                box-shadow: 0 12px 15px 0 rgba(0,0,0,0.25);
+                border-radius: 3px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                & > div.qr > img{
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 0 !important;
+                }
+                & > h2, & > div.qr, & > div.box_address{//directamenete si ocultamos la imagen al cargar no funciona para el primer click pero si apartir del segundo.
+                    visibility: hidden;
+                    margin: 10px;
+                }
+            }
+            &.show{
+                visibility: visible;
+                transition-delay: .3s;
+                & > div.coin{
+                    //max-width: 350px;
+                    //width: 90%;
+                    width: 320px;
+                    height: 320px;
+                    visibility: visible;
+                    transition: width .3s, height .3s;
+                    & > h2, & > div.qr, & > div.box_address{
+                        visibility: visible;
+                        transition-delay: .3s;
+                        color: rgba(0,0,0,.6);
+                    }
+                    & > div.box_address > #address{
+                        background-color: rgba(0,0,0,.05);
+                        border: 0;
+                        border-radius: 3px;
+                        box-shadow: none;
+                        padding: 15px 0;
+                        color: rgba(0,0,0,.6);
+                        width: 300px;
+                        font-size: 12px;
+                        text-align: center
+                    }
+                }
+            }
+        }
+    }
+    //FIN DEL MODAL
+}
+//INICIO DEL MIXIN-------------------
 .container{
     background-color: aqua;
     height: 100vh;
@@ -11,7 +105,8 @@
     flex-direction: column;
     header{
         background-color: blue;
-        height: 200px;
+        //height: 200px;
+        height: 100vh;
         flex-shrink: 0;
     }
     section{
@@ -32,7 +127,88 @@
                 margin-top: -30px;
                 background-color: #f3f5f7;
                 position: relative;
-                
+                //Inicio de la caja autor en el primer articulo
+                 & > div.mainbox_author{
+                    //width: 300px;
+                    //height: 450px;
+                    width: 250px;//CAMBIO DE PRUEVA(2)
+                    height: 400px;//CAMBIO DE PRUEVA(3)
+                    padding: 20px;
+                    margin: 30px 0 20px 20px;
+                    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+                    float: right;
+                    text-align: center;
+                    
+                    z-index: 50;//prueba 1
+                    position: relative;//cambio 2
+                    
+                    //display: none;
+                    //visibility: hidden;
+                    font-size: .8rem;//CAMBIO DE PRUEVA(1)
+                    opacity: 0;
+                    
+                    &.display{
+                        //display: block;
+                        //visibility: visible;
+                        opacity: 1;
+                        transition: all .7s cubic-bezier(1,0,1,0);
+                    }
+                    
+                    & > img.photo{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        //display: block;
+                        display: inline-block;
+                        //margin: auto;
+                    }
+                    & > h3{
+                        //text-align: center;
+                        margin-top: 10px;
+                        color: #344e5a;
+                    }
+                    & > p{
+                        margin: 15px 0;
+                        //text-align: justify;
+                    }
+                    & > p + p{
+                        text-align: left;
+                    }
+                    & > ul{
+                        list-style: none;
+                        text-align: left;
+                        & > li {
+                            //display: inline-block;
+                            //width: 48%;
+                            //font-size: 1.5rem;
+                            padding: 5px;
+                            margin: 10px 0;
+                            text-decoration: none;
+                            background-color: #e6eaee;
+                            //transition: color 1s, background-color 1s;
+                            //color: transparent;
+                            & > a{
+                                text-decoration: none;
+                                color: #066b98;
+                                //color: 
+                            }
+                        }
+                    }
+                    
+                    @include modalCoins(#e6eaee);
+                    /*
+                    @media screen and(max-width: 1000px){
+                        display: none;
+                    }
+                    */
+                    &#mainbox_author{
+                        @media screen and(max-width: 1000px){
+                            display: none;
+                        }
+                    }
+                    
+                }
+                //Fin de la caja autor en el primer articulo
             }
             /*--animacion JS de (H2, P) para las 2 secciones o articulos -----------------*/
             & > h2{
@@ -75,6 +251,35 @@
                 }
             }
             /*--animacion JS-----------------*/
+            
+            @media screen and(max-width: 1000px){
+                width: 90%;
+                & > h2{
+                    width: 77%;
+                    font-size: 2.1rem;
+                }
+                & > p{
+                    width: 85%;
+                    font-size: 1rem;
+                }
+            }
+            @media screen and(max-width: 600px){
+                width: 98%;
+                &.blockchain{
+                    margin-top: 0px;
+                }
+                & > h2{
+                    width: 90%;
+                    font-size: 1.8rem;
+                    margin: 30px auto 30px;
+                    
+                }
+                & > p{
+                    width: 90%;
+                    font-size: 0.8rem;
+                    
+                }
+            }
         }
     }
     footer{
