@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    var VariablesG;
+    var Variables;
     
     function execute() {
         //se ejecutan al cargar el documeto.
