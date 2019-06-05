@@ -1,0 +1,82 @@
+*, *::before, *::after, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    content: "";
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 1800px;
+    height: 100vh;
+    margin: auto;
+    header{
+        background-color: blue;
+        height: 200px;
+        flex-shrink: 0;
+    }
+    section{
+        flex: 1 0 auto;//--AGREGADO PARA EXPLORER----SHRINK EN CERO REQUIERE EXPLORER PARA NO ENCOGERSE
+        display: flex;
+        position: relative;
+        aside{
+            background-color: #FBFCFC;
+            background-color: rgba(226, 234, 231, 1);
+            
+            transition: all .5s;
+            display: flex;
+            justify-content: space-between;
+            width: 350px;
+            position: absolute;
+            height: 100%;
+            z-index: 100;//temporal hasta insertar js
+            //overflow: auto;//temporal
+            ul{
+                list-style: none;
+                padding: 10px 0px 0 30px;
+                width: 85%;
+                li:first-child{
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    margin-bottom: 10px;
+                }
+                li{
+                    padding: 8px;
+                    position: relative;
+                    &:before{
+                        content: "";
+                        width: 100%;
+                        height: 3px;
+                        background-color: white;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        display: none;
+                    }
+                    &:not(:first-child):hover{
+                        background-color: rgba(92, 143, 128, 1);
+                        a{
+                            color: white;
+                        }
+                        &:before{
+                            display: block;
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                        color: #23624F;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+     }   
+    
+    footer{ 
+        background-color: brown;
+        height: 100px;
+        flex-shrink: 0;
+    }    
+}
