@@ -70,6 +70,128 @@
                     }
                 }
             }
+            .barraLateral{
+                 width: 15%;
+                //background-color: rgba(226,234,231,1);
+                //background-color: red;
+                display: none;
+                div.boton{
+                    cursor: pointer;
+                    width: 52px;
+                    padding: 12px 8px;
+                    /* Animacio de las barras*/
+                    transition-property: transform, border-radius;
+                    transition-duration: .5s;
+                    transition-timing-function: ease-in;
+                    /*----------------------------*/
+                    div{
+                        width: 100%;
+                        height: 6px;
+                        background-color: white;
+                        /* Animacio de las barras*/
+                        transition-property: transform, border;
+                        transition-duration: .3s;
+                        transition-timing-function: ease-in;
+                        transition-delay: .5s, .7s;
+                        /*----------------------------*/
+                        border: 1px solid #23624F;
+                        &:nth-child(2){
+                            margin: 4px 0;
+                        }
+                    }
+                }
+                //cambio revisar con screen HD------(1)
+                
+                @media screen and(max-width: 600px){
+                    width: 10%;
+                    margin-left: auto;
+                    div.boton{
+                        width: 35px;
+                        padding: 12px 3px;
+                        div:nth-child(2){
+                            //margin: 3px 0;
+                        }
+                    }
+                } 
+                //cambio revisar con screen HD------(1)
+            }
+            @media screen and(max-width: 1700px){
+                margin-left: -297px;
+                div.barraLateral{
+                    display: block;       
+                }
+                &.toggle{
+                    margin-left: 0;
+                    div.barraLateral{
+                        //background-color: transparent;
+                        width: 15%;//cambio revisar con screen HD------(3) TOTAL 3 cambios
+                        box-shadow: 10px 5px 10px -10px rgba(0, 0, 0, 0.8);
+                        div.boton{
+                            height: 45px;
+                            width: 45px;
+                            padding: 13px 0 0 10px;
+                            border-radius: 50%;
+                            background-color: #5C8F80;
+                            transform: rotate(90deg);
+                            margin-top: 15px;
+                            &:hover{
+                                background-color: #23624F;
+                            }
+                            div{
+                                height: 3px;
+                                width: 70%;
+                                border: none;
+                            }
+                            div:nth-child(2){
+                                transform: rotate(62deg) translate(-0px, 6.5px);
+                            }
+                            div:nth-child(3){
+                                transform: rotate(-62deg) translate(6px, 3px);
+                            }
+                        }
+                    }
+                }
+                
+            }
+            //cambio revisar con screen HD------(2)
+            
+            @media screen and(max-width: 600px){
+                margin-left: -315px;
+                font-size: 0.9rem;
+            }
+            //cambio revisar con screen HD------(2)
+        }
+        div.articleContainer{
+            background-color: white;
+            flex-grow: 10;
+            display: flex;
+            justify-content: center;
+            article{
+                width: 80%;
+                background-color: white;
+                padding: 20px;
+                //text-align: center;
+                //box-shadow: 1px 0 10px $rgb-primary, -1px 0 10px $rgb-primary;
+                //box-shadow: 1px 0 10px #83A89D, -1px 0 10px #83A89D;
+                box-shadow: 10px 0 15px -10px rgba(0, 0, 0, 0.4), -9px 0 15px -10px rgba(0, 0, 0, 0.4);
+                 /*--animacion JS de (H2, P) para las 2 secciones o articulos -----------------*/
+                
+                & > h2{
+                    margin: 30px auto 30px;
+                    width: 70%;
+                    text-align: center;
+                    font-size: 2.2rem;
+                    font-weight: 200;
+                }
+                
+                & > p{
+                    visibility: visible;
+                    width: 75%;
+                    margin: 0 auto 30px;
+                    text-align: justify;
+                    font-size: 1.1rem;
+                }
+            }
         }
      }   
     
