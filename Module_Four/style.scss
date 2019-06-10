@@ -190,6 +190,196 @@
                     text-align: justify;
                     font-size: 1.1rem;
                 }
+                /*--animacion JS-----------------*/
+                //--ININIO DEL CAJA DEL AUTOR----------
+                div.boxauthor_article{
+                    color: #344e5a;
+                    width: 75%;
+                    margin: auto;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+                    font-size: 0.8rem;
+                    opacity: 0;
+                    &.display{
+                        opacity: 1;
+                        transition: all .7s cubic-bezier(1,0,1,0);
+                    }
+                    & > div.author_name{
+                        padding: 10px 20px 0;
+                        & > h3{
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                            padding-left: 10px;
+                            
+                        }
+                    }
+                    div.author_desc{
+                        //background-color: brown;
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 0 20px 10px;
+                        
+                        
+                        
+                        & > div:first-child{
+                            //background-color: aquamarine;
+                            //min-width: 400px;
+                            //width: 50%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            & > h4{
+                                font-size: 0.85rem;
+                                margin-bottom: 2px;
+                            }
+                            
+                        }
+                        /*
+                        & > div:last-child{
+                            min-width: 200px;
+                            width: 50%;
+                            height: 50px;
+                            background-color: aqua;
+                        }
+                        */
+                        //INICIO DEL MODAL
+                        .box_coins{
+                            //background-color: aqua;
+                            display: flex;//cambio recomendado(3)
+                            flex-direction: column;//cambio recomendado(4)
+                            justify-content: center;//cambio recomendado(5)
+                            //align-self: flex-start;//obcional(6)
+                            & > ul.coins{
+                                list-style: none;
+                                display: flex;
+                                justify-content: center;
+                                //background-color: blue;
+                                //margin: 10px 0 30px;
+                                //margin-bottom: 10px;
+                                & > li{
+                                    //border-left: 1px solid rgba(0, 0, 0, 0.1);
+                                    //background-color: bisque;
+                                    margin: 0 5px;
+                                    padding: 10px 15px;
+                                    border-radius: 3px;//cambio recomendado(2)
+                                    //background-color: blueviolet;
+                                    &:hover{
+                                        background-color: #e6eaee;
+                                        //background-color: rgba(0, 0, 0, .9);
+                                    }
+                                }
+                                & > li > span{
+                                    display: block;//cambio recomendado(1)
+                                    //font-size: 30px;
+                                    font-size: 2em;
+                                    cursor: pointer;
+                                }
+                            }
+                            & > div.modal{
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                //background-color: rgba(243, 238, 238, 0.80);
+                                background-color: rgba(0, 0, 0, 0.25);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                visibility: hidden;
+                                & > div.coin{
+                                    width: 10px;
+                                    height: 10px;
+                                    background-color: #ffffff;
+                                    box-shadow: 0 12px 15px 0 rgba(0,0,0,0.25);
+                                    border-radius: 3px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    text-align: center;
+                                    & > div.qr > img{
+                                        width: 150px;
+                                        height: 150px;
+                                        border-radius: 0 !important;
+                                    }
+                                    & > h2, & > div.qr, & > div.box_address{//directamenete si ocultamos la imagen al cargar no funciona para el primer click pero si apartir del segundo.
+                                        visibility: hidden;
+                                        margin: 10px;
+                                    }
+                                }
+                                &.show{
+                                    visibility: visible;
+                                    transition-delay: .3s;
+                                    & > div.coin{
+                                        //max-width: 350px;
+                                        //width: 90%;
+                                        width: 320px;
+                                        height: 320px;
+                                        visibility: visible;
+                                        transition: width .3s, height .3s;
+                                        & > h2, & > div.qr, & > div.box_address{
+                                            visibility: visible;
+                                            transition-delay: .3s;
+                                            color: rgba(0,0,0,.6);
+                                        }
+                                        & > div.box_address > #address{
+                                            background-color: rgba(0,0,0,.05);
+                                            border: 0;
+                                            border-radius: 3px;
+                                            box-shadow: none;
+                                            padding: 15px 0;
+                                            color: rgba(0,0,0,.6);
+                                            width: 300px;
+                                            font-size: 12px;
+                                            text-align: center
+                                        }
+                                    }
+                                }
+                            }
+                            @media screen and(max-width: 1300px){
+                                margin: 10px auto 0;
+                            }
+                        }
+                        //FIN DEL MODAL
+                        @media screen and(max-width: 1300px){
+                            padding-top: 10px;
+                        }
+                    }
+                    @media screen and(max-width: 1000px){
+                        width: 85%;
+                    }
+                    @media screen and(max-width: 600px){
+                        width: 92%;
+                    }
+                }
+                 //--FIN DEL CAJA DEL AUTOR----------
+                @media screen and(max-width: 1000px){
+                    width: 85%;
+                    & > h2{
+                        width: 82%;
+                        font-size: 2.1rem;
+                        margin-top: 20px;
+                    }
+                    & > p{
+                        width: 85%;
+                        font-size: 1rem;
+                    }
+                }
+                @media screen and(max-width: 600px){
+                    width: 98%;
+                    &.blockchain{
+                        margin-top: 0px;
+                    }
+                    & > h2{
+                        width: 90%;
+                        font-size: 1.8rem;
+                        margin-top: 10px;
+                    }
+                    & > p{
+                        width: 90%;
+                        font-size: 0.8rem;
+                    }
+                }
             }
         }
      }   
