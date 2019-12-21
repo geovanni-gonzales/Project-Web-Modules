@@ -1,0 +1,86 @@
+*, *::before, *::after, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    content: "";
+}
+.container {
+    background-color: aqua;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    header{
+        background-color: blue;
+        height: 200px;
+        flex-shrink: 0;
+    }
+    section{
+        background-color: blueviolet;
+        flex: 1 0 auto;
+        ul{
+            background-color: chartreuse;
+            width: 500px;
+            li{
+                //padding: 10px;
+            }
+            & li:first-child{
+                background-color: aqua;
+                color: red;
+                cursor: pointer;
+                & > p:after{
+                    //content: '\2b73';//'\271a';
+                    //content: '\002b';//'\271a';
+                    content: '\2b9f';//'\271a';
+                    float: left;
+                    line-height: 1.1;
+                }
+                & > p.active:after{
+                    //content: '\02212';
+                    content: '\2b9d';
+                    line-height: 1.5;
+                    //content: '\268a';
+                    //float: left;
+                    //padding: 0 5px 0;
+                }
+                
+            }
+            & li:nth-child(2){
+                height: 0;
+                overflow: hidden;   
+                background-color: darkorange;
+                color: transparent;
+                //transition: all .5s;
+                //transition: color .7s;
+                //visibility: hidden;
+                
+                //transition-property: height, visibility;
+                transition-property: height, color;
+                transition-duration: .5s, .8s;
+                //transition: all 5s;
+                
+                
+                
+                //transition: background-color 0.8s cubic-bezier(1,0,1,0);
+                &.toggle{
+                    height: 250px; 
+                    background-color: chartreuse;
+                    color: black;
+//                    overflow: visible;
+//                    transition-property: overflow;
+//                    transition-duration: 50s;
+                    
+                    //visibility: visible;
+                }
+            }
+            & li:last-child{
+                background-color: burlywood;
+            }
+        }
+     }   
+    
+    footer{ 
+        background-color: brown;
+        height: 100px;
+        flex-shrink: 0;
+    }    
+}
