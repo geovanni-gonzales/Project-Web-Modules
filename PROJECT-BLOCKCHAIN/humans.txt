@@ -16,4 +16,4 @@
             Languaje: Spain
             Doctype: HTML5
             Components: Responsive design, Google Fonts
-            IDE: Brackets, Visual Studio Code, Prepros, XAMPP
+            IDE: Brackets, Visual Studio Code, Prepros, XAMPP, Git, GitHub
