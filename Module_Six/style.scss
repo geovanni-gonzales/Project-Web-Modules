@@ -35,14 +35,13 @@
                     line-height: 1.1;
                 }
                 & > p.active:after{
-                    //content: '\02212';
+                    //content: '\02212'; 
                     content: '\2b9d';
                     line-height: 1.5;
                     //content: '\268a';
                     //float: left;
                     //padding: 0 5px 0;
-                }
-                
+                }           
             }
             & li:nth-child(2){
                 height: 0;

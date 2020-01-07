@@ -158,6 +158,12 @@
     //-------INICIO DEL MODAL----------
     //FIN del Modulo de Navegacion Movil
     
+    //inicio del efecto acordion de la descripcion para web
+    function toggle_desc(){
+        document.querySelector("div.mainbox_author > ul > li:nth-child(2)").classList.toggle("toggle_desc");      
+        document.querySelector(".mainbox_author > ul > li:first-child > p").classList.toggle("active");      
+    }
+    //fin del efecto acordion de la descripcion para web
     function execute() {
         hr = document.getElementsByTagName("header")[0];
         h2 = document.getElementsByTagName("h2");
@@ -187,6 +193,9 @@
         //FIN DEL MODAL
         //FIN del modulo NAV MOVIL
 
+        //inicio del efecto acordion de la descripcion para web
+        document.querySelector(".mainbox_author > ul > li > p").addEventListener("click", toggle_desc);
+        //fin del efecto acordion de la descripcion para web
     }
     window.addEventListener("load", execute);
 }());

@@ -501,8 +501,8 @@ $tertiaryWhite: white;
                     //width: 300px;
                     //height: 450px;
                     width: 350px;//CAMBIO DE PRUEVA(2)
-                    height: 700px;//CAMBIO DE PRUEVA(3)
-                    padding: 20px;
+                    //height: 700px;//CAMBIO DE PRUEVA(3)
+                    padding: 20px 20px 0;
                     margin: 30px 0 20px 20px;
                     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
                     float: right;
@@ -540,18 +540,18 @@ $tertiaryWhite: white;
                         margin: 15px 0;
                         //text-align: justify;
                     }
-                    & > p + p{
-                        text-align: left;
-                    }
+                    /* & > p + p{
+                        //text-align: left;
+                    } */
                     & > ul{
                         list-style: none;
                         text-align: left;
-                        & > li {
+                        & > li:not(:nth-child(2)) {
                             //display: inline-block;
                             //width: 48%;
                             //font-size: 1.5rem;
                             padding: 5px;
-                            margin: 10px 0;
+                            margin: 5px 0;
                             text-decoration: none;
                             background-color: #e6eaee;
                             //transition: color 1s, background-color 1s;
@@ -562,8 +562,37 @@ $tertiaryWhite: white;
                                 //color: 
                             }
                         }
+                        //inicio del efecto acordion de la descripcion para web
+                        /* agregado 21 - 12 - 2019 */
+                        & li:first-child{
+                            cursor: pointer;
+                            color: #066b98;
+                            & > p::after{
+                                content: '\2b9f';
+                                float: left;
+                                margin-right: 5px;
+                            }
+                            & > p.active::after{
+                                content: '\2b9d';
+                                line-height: 1.7;
+                            }
+                        }
+                        & li:nth-child(2){
+                            height: 0;
+                            overflow: hidden;
+                            color: transparent;
+                            background-color: #e6eaee;
+                            transition-property: height, color, padding;
+                            transition-duration: .5s, .8s, .5s;
+                            &.toggle_desc{
+                                height: 380px;
+                                color: black;
+                                padding: 10px;
+                                //height: auto;
+                            }
+                        }
                     }
-                    
+                    //fin del efecto acordion de la descripcion para web
                     @include modalCoins(#e6eaee);
                     /*
                     @media screen and(max-width: 1000px){

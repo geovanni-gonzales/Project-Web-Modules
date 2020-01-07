@@ -452,8 +452,7 @@ html, body {
                 */ }
         .container section > article.blockchain > div.mainbox_author {
           width: 350px;
-          height: 700px;
-          padding: 20px;
+          padding: 20px 20px 0;
           margin: 30px 0 20px 20px;
           -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
@@ -463,6 +462,9 @@ html, body {
           position: relative;
           font-size: .8rem;
           opacity: 0;
+          /* & > p + p{
+                        //text-align: left;
+                    } */
           /*
                     @media screen and(max-width: 1000px){
                         display: none;
@@ -483,19 +485,43 @@ html, body {
             color: #344e5a; }
           .container section > article.blockchain > div.mainbox_author > p {
             margin: 15px 0; }
-          .container section > article.blockchain > div.mainbox_author > p + p {
-            text-align: left; }
           .container section > article.blockchain > div.mainbox_author > ul {
             list-style: none;
-            text-align: left; }
-            .container section > article.blockchain > div.mainbox_author > ul > li {
+            text-align: left;
+            /* agregado 21 - 12 - 2019 */ }
+            .container section > article.blockchain > div.mainbox_author > ul > li:not(:nth-child(2)) {
               padding: 5px;
-              margin: 10px 0;
+              margin: 5px 0;
               text-decoration: none;
               background-color: #e6eaee; }
-              .container section > article.blockchain > div.mainbox_author > ul > li > a {
+              .container section > article.blockchain > div.mainbox_author > ul > li:not(:nth-child(2)) > a {
                 text-decoration: none;
                 color: #066b98; }
+            .container section > article.blockchain > div.mainbox_author > ul li:first-child {
+              cursor: pointer;
+              color: #066b98; }
+              .container section > article.blockchain > div.mainbox_author > ul li:first-child > p::after {
+                content: '\2b9f';
+                float: left;
+                margin-right: 5px; }
+              .container section > article.blockchain > div.mainbox_author > ul li:first-child > p.active::after {
+                content: '\2b9d';
+                line-height: 1.7; }
+            .container section > article.blockchain > div.mainbox_author > ul li:nth-child(2) {
+              height: 0;
+              overflow: hidden;
+              color: transparent;
+              background-color: #e6eaee;
+              -webkit-transition-property: height, color, padding;
+              -o-transition-property: height, color, padding;
+              transition-property: height, color, padding;
+              -webkit-transition-duration: .5s, .8s, .5s;
+              -o-transition-duration: .5s, .8s, .5s;
+              transition-duration: .5s, .8s, .5s; }
+              .container section > article.blockchain > div.mainbox_author > ul li:nth-child(2).toggle_desc {
+                height: 380px;
+                color: black;
+                padding: 10px; }
           .container section > article.blockchain > div.mainbox_author .box_coins > ul.coins {
             list-style: none;
             display: -webkit-box;
