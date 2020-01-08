@@ -143,11 +143,11 @@
         }
 
         if (t_span === "icon-bitcoin") {
-            asignar("APORTE BITCOIN", "images/binance_bitcoin.png", "1PZh2W88B1wSAYyB5ZwyY5zexKnjM2DC8S");
+            asignar("APORTE BITCOIN", "images/gc_img/binance_bitcoin.png", "1PZh2W88B1wSAYyB5ZwyY5zexKnjM2DC8S");
         } else if (t_span === "icon-ethereum") {
-            asignar("APORTE ETHERIUM", "images/uphold_ethereum.png", "0x09bDb8e103162220CA91EE01D1cF87098E2FCac1");
+            asignar("APORTE ETHERIUM", "images/gc_img/uphold_ethereum.png", "0x09bDb8e103162220CA91EE01D1cF87098E2FCac1");
         } else if (t_span === "icon-monero") {
-            asignar("APORTE MONERO", "images/poloniex_monero.png", "4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbS2YWqhhgA9S13zRqHH");
+            asignar("APORTE MONERO", "images/gc_img/poloniex_monero.png", "4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbS2YWqhhgA9S13zRqHH");
         }
     }
     function closeModal(e) {
