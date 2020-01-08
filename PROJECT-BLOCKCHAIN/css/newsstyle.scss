@@ -87,9 +87,7 @@ $rgb-quaternary: rgb(226, 234, 231);
             position: relative;
             width: 500px;
             margin: auto;
-            @media screen and(max-width: 700px){
-                width: 80%;
-            }
+            
             div:first-child{
                 display: flex;
                 span{
@@ -107,6 +105,17 @@ $rgb-quaternary: rgb(226, 234, 231);
                 padding: 10px;
                 h1{
                     margin-bottom: 10px;
+                }
+            }
+            @media screen and(max-width: 700px){
+                width: 80%;
+                div:first-child > span{
+                    font-size: 2rem;
+                    margin-top: 5px;
+                }
+                div:last-child{
+                    font-size: 0.8rem;
+                    margin: 5px 0;
                 }
             }
         }
@@ -172,8 +181,11 @@ $rgb-quaternary: rgb(226, 234, 231);
             z-index: 100;//temporal hasta insertar js
             ul{
                 list-style: none;
-                padding: 10px 0px 0 30px;
+                padding: 10px 0px 0 10px;
                 width: 85%;
+                @media screen and(max-width: 600px){
+                    padding: 0 0 0 2px;
+                }
                 li:first-child{
                     text-align: center;
                     font-weight: bold;
@@ -183,6 +195,12 @@ $rgb-quaternary: rgb(226, 234, 231);
                 li{
                     padding: 8px;
                     position: relative;
+                    
+                    margin: 10px auto;
+                    &:not(:first-child){
+                        border: 1px solid rgba(92, 143, 128, 1);
+                        border-radius: 5px;
+                    }
                     &:before{
                         content: "";
                         width: 100%;
@@ -319,7 +337,7 @@ $rgb-quaternary: rgb(226, 234, 231);
                 
                 & > h2{
                     margin: 30px auto 30px;
-                    width: 70%;
+                    width: 60%;
                     text-align: center;
                     font-size: 2.2rem;
                     font-weight: 200;
@@ -327,6 +345,7 @@ $rgb-quaternary: rgb(226, 234, 231);
                     transform: translateX(20%);
                     //border-bottom: 4px solid white;//por defecto
                     color: white;
+                    font-weight: bold;
                     &.h2{
                         visibility: visible;
                         color: #066b98;
@@ -334,10 +353,15 @@ $rgb-quaternary: rgb(226, 234, 231);
                         transition: all 1s;
                     }
                 }
-                
+                & > img{
+                    max-height: 450px;
+                    width: 60%;
+                    display: block;
+                    margin: 0 auto 20px;
+                }
                 & > p{
                     visibility: hidden;
-                    width: 75%;
+                    width: 60%;
                     margin: 0 auto 30px;
                     transform: translateY(50px);
                     text-align: justify;
@@ -357,7 +381,7 @@ $rgb-quaternary: rgb(226, 234, 231);
                 div.boxauthor_article{
                     //background-color: #e6eaee;
                     color: #344e5a;
-                    width: 75%;
+                    width: 60%;
                     margin: auto;
                     border-radius: 5px;
                     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
@@ -533,6 +557,9 @@ $rgb-quaternary: rgb(226, 234, 231);
                         font-size: 2.1rem;
                         margin-top: 20px;
                     }
+                    & > img{
+                        width: 85%;
+                    }
                     & > p{
                         width: 85%;
                         font-size: 1rem;
@@ -545,8 +572,12 @@ $rgb-quaternary: rgb(226, 234, 231);
                     }
                     & > h2{
                         width: 90%;
-                        font-size: 1.8rem;
-                        margin-top: 10px;
+                        font-size: 1.2rem;
+                        //margin-top: 10px;
+                        margin: 0 auto 5px;
+                    }
+                    & > img{
+                        width: 90%;
                     }
                     & > p{
                         width: 90%;
