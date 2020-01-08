@@ -86,8 +86,7 @@ $rgb-quaternary: rgb(226, 234, 231);
             text-align: center;
             position: relative;
             width: 500px;
-            margin: auto;
-            
+            margin: auto;           
             div:first-child{
                 display: flex;
                 span{
@@ -194,8 +193,7 @@ $rgb-quaternary: rgb(226, 234, 231);
                 }
                 li{
                     padding: 8px;
-                    position: relative;
-                    
+                    position: relative;               
                     margin: 10px auto;
                     &:not(:first-child){
                         border: 1px solid rgba(92, 143, 128, 1);
