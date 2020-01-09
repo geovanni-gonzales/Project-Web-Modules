@@ -1,9 +1,9 @@
 (function () {
     'use strict';
-    var modal, ul_coins, u;
+    var modal, ul_coins, u,div_im;
     //INICIO del Modulo de Navegacion Movil
     function nav_scroll() {
-        var scrolly, nv, div_im, ul, modal;
+        var scrolly, nv, div_im, ul;
         scrolly = window.pageYOffset;
         nv = document.querySelector("nav.nav_movil");
         div_im = document.querySelector(".nav_movil li > div");
@@ -19,9 +19,9 @@
         }
     }
     function toogle_movil(e) {
-        var ul, div_im, ul_at, div_at, section;
+        var ul, ul_at, div_at, section;
         ul = document.querySelector(".nav_movil li > span + ul");
-        div_im = document.querySelector(".nav_movil li > div");
+        div_im = document.querySelector(".ul_movil li > div");
 
         //if(e.target.tagName.toLowerCase() == "span"){
         if (e.target.className === "icon-menu") {
@@ -83,7 +83,13 @@
     }
     //-------INICIO DEL MODAL----------
     //FIN del Modulo de Navegacion Movil
-    
+    function closeVision(e){
+        //var div_i;
+        //div_i = document.querySelector(".ul_movil li > div");
+        if(e.target.tagName === "A"){
+             div_im.removeAttribute("class");
+        }
+    }
     function execute() {
         //INICIO del modulo NAV MOVIL
         document.querySelector(".nav_movil > .ul_movil").addEventListener("click", toogle_movil);
@@ -91,13 +97,19 @@
         //INICIO DEL MODAL
         modal = document.querySelector("div.modal");
         
-        ul_coins = document.querySelectorAll("ul.coins");
-        for (u = 0; u < ul_coins.length; u += 1) {
+        /*ul_coins = document.querySelectorAll("ul.coins");
+        for (u = 0; u < ul_coins.length; u += 1) {// es igual i++ y i+=1
             ul_coins[u].addEventListener("click", show);
-        }
+        }*/
+
+//REEMPLAZANDO AL FOR CON DELEGACION DE EVENTOS Y RECOGIENDO EL OBJETO DEL EVENTO
+        ul_coins = document.querySelector("ul.coins").addEventListener("click", show);
+
         document.querySelector("div.box_coins").addEventListener("click", closeModal);
         //FIN DEL MODAL
         //FIN del modulo NAV MOVIL
+
+        document.querySelector("div.internal_link").addEventListener("click", closeVision);
     }
     window.addEventListener("load", execute);
 }());
