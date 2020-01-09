@@ -247,6 +247,11 @@ $tertiaryWhite: white;
                     transition: color 1s;
                     line-height: normal;
                     font-size: .85rem;
+                    @media screen and(max-width: 600px){
+                        font-size: .75rem;
+                    }@media screen and(max-width: 350px){
+                        font-size: .65rem;
+                    }
                     h3{
                         margin: 20px 0;
                     }

@@ -136,6 +136,12 @@ html, body {
           transition: color 1s;
           line-height: normal;
           font-size: .85rem; }
+          @media screen and (max-width: 600px) {
+            .container header nav.nav_movil ul.ul_movil > li > div {
+              font-size: .75rem; } }
+          @media screen and (max-width: 350px) {
+            .container header nav.nav_movil ul.ul_movil > li > div {
+              font-size: .65rem; } }
           .container header nav.nav_movil ul.ul_movil > li > div h3 {
             margin: 20px 0; }
           .container header nav.nav_movil ul.ul_movil > li > div p {
