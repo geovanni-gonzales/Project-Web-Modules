@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    var modal, ul_coins, u,div_im;
+    var modal, ul_coins, u, div_im;
     //INICIO del Modulo de Navegacion Movil
     function nav_scroll() {
         var scrolly, nv, div_im, ul;
