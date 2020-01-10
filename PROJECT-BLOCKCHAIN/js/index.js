@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    var hr, he, posy, v, x, h, t, t2, a, h2, p, modal, i, ul_coins, u, div;
+    var hr, he, posy, v, x, h, t, t2, a, h2, p, modal, i, ul_coins, u, div, div_im;
      
     
     /*- Funcion de Redimencion de imagen de fondo de acuerdo al tamaño del header */
@@ -80,7 +80,7 @@
         }
     }
     function toogle_movil(e) {
-        var ul, div_im, ul_at, div_at, section;
+        var ul, ul_at, div_at, section;
         ul = document.querySelector(".nav_movil li > span + ul");
         div_im = document.querySelector(".nav_movil li > div");
 
@@ -164,6 +164,13 @@
         document.querySelector(".mainbox_author > ul > li:first-child > p").classList.toggle("active");      
     }
     //fin del efecto acordion de la descripcion para web
+    
+    //Para cerrar el div de visio del autor cuando click en el linnk de parrafos
+    function closeVision(e){
+        if(e.target.tagName === "A"){
+             div_im.removeAttribute("class");
+        }
+    }
     function execute() {
         hr = document.getElementsByTagName("header")[0];
         h2 = document.getElementsByTagName("h2");
@@ -185,10 +192,8 @@
         modal = document.querySelector("div.modal");
         //document.querySelector("ul.coins").addEventListener("click", show);
         
-        ul_coins = document.querySelectorAll("ul.coins");
-        for (u = 0; u < ul_coins.length; u += 1) {
-            ul_coins[u].addEventListener("click", show);
-        }
+        ul_coins = document.querySelector("ul.coins").addEventListener("click", show);
+        
         document.querySelector("div.box_coins").addEventListener("click", closeModal);
         //FIN DEL MODAL
         //FIN del modulo NAV MOVIL
@@ -196,6 +201,9 @@
         //inicio del efecto acordion de la descripcion para web
         document.querySelector(".mainbox_author > ul > li > p").addEventListener("click", toggle_desc);
         //fin del efecto acordion de la descripcion para web
+        
+        //Para cerrar el div de visio del autor cuando click en el linnk de parrafos
+        document.querySelector("div.internal_link").addEventListener("click", closeVision);
     }
     window.addEventListener("load", execute);
 }());
