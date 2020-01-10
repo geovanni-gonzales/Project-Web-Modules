@@ -192,7 +192,13 @@
         modal = document.querySelector("div.modal");
         //document.querySelector("ul.coins").addEventListener("click", show);
         
-        ul_coins = document.querySelector("ul.coins").addEventListener("click", show);
+        //Es necesario el bucle for ya que estamos usando 2 ul_coins tanto para la pagina web y movil
+        //por delegacion solo selecciona una 
+        ul_coins = document.querySelectorAll("ul.coins");
+        for (u = 0; u < ul_coins.length; u += 1) {// es igual i++ y i+=1
+            ul_coins[u].addEventListener("click", show);
+        }
+        //ul_coins = document.querySelector("ul.coins").addEventListener("click", show);
         
         document.querySelector("div.box_coins").addEventListener("click", closeModal);
         //FIN DEL MODAL
