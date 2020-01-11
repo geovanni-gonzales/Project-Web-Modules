@@ -3,17 +3,21 @@
             Email: gonsalo_gm [at] hotmail.com 
             Twitter: @geovanni_hgm
             From: Lima, Peru
-
-/* THANKS */
-            nombre (fotos)
-            Vincent Garreau: https://github.com/VincentGarreau/particles.js
-            Manos: https://github.com/malihu/malihu-custom-scrollbar-plugin
-
-
+            
 /* SITE */
             Site URL: http://www.tecnoblochain.com/
-            Last update: 2018/01
+            Last update: 2020/01
             Languaje: Spain
             Doctype: HTML5
             Components: Responsive design, Google Fonts
             IDE: Brackets, Visual Studio Code, Prepros, XAMPP, Git, GitHub
+
+/* THANKS */
+            Vincent Garreau: https://github.com/VincentGarreau/particles.js
+            Manos: https://github.com/malihu/malihu-custom-scrollbar-plugin      
+            July Brenda Gonzales Callapaza: https://unsplash.com/@jbrengc
+            TheDigitalArtist : https://pixabay.com/users/thedigitalartist-202249
+            Tumisu: https://pixabay.com/users/tumisu-148124
+            SisterNechama: https://pixabay.com/users/sisternechama-8455601
+
+
