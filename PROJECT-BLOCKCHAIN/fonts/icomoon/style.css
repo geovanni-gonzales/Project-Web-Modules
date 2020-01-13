@@ -1,12 +1,13 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ioqwy4');
-  src:  url('fonts/icomoon.eot?ioqwy4#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ioqwy4') format('truetype'),
-    url('fonts/icomoon.woff?ioqwy4') format('woff'),
-    url('fonts/icomoon.svg?ioqwy4#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?g3446p');
+  src:  url('fonts/icomoon.eot?g3446p#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?g3446p') format('truetype'),
+    url('fonts/icomoon.woff?g3446p') format('woff'),
+    url('fonts/icomoon.svg?g3446p#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -24,14 +25,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-bitcoin1:before {
+  content: "\e90c";
+}
 .icon-youtube:before {
   content: "\e90a";
+}
+.icon-github:before {
+  content: "\e90b";
 }
 .icon-facebook:before {
   content: "\e909";
 }
 .icon-twitter:before {
   content: "\e908";
+}
+.icon-home:before {
+  content: "\e904";
+}
+.icon-email:before {
+  content: "\e903";
 }
 .icon-security:before {
   content: "\e907";
@@ -42,11 +55,9 @@
 .icon-menu:before {
   content: "\e905";
 }
-.icon-home:before {
-  content: "\e904";
-}
-.icon-email:before {
-  content: "\e903";
+.icon-ripple:before {
+  content: "\e90d";
+  color: #0085c0;
 }
 .icon-monero:before {
   content: "\e902";
