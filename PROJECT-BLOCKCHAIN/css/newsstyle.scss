@@ -505,6 +505,7 @@ $rgb-quaternary: rgb(226, 234, 231);
                                 &.show{
                                     visibility: visible;
                                     transition-delay: .3s;
+                                    z-index: 200;
                                     & > div.coin{
                                         //max-width: 350px;
                                         //width: 90%;

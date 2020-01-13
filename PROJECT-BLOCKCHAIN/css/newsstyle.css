@@ -531,7 +531,8 @@ html, body {
                   visibility: visible;
                   -webkit-transition-delay: .3s;
                   -o-transition-delay: .3s;
-                  transition-delay: .3s; }
+                  transition-delay: .3s;
+                  z-index: 200; }
                   .container section div.articleContainer article div.boxauthor_article div.author_desc .box_coins > div.modal.show > div.coin {
                     width: 320px;
                     height: 320px;
