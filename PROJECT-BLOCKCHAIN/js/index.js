@@ -147,7 +147,7 @@
         } else if (t_span === "icon-ethereum") {
             asignar("APORTE ETHERIUM", "images/gc_img/ns_qr_ethereum.png", "0x9Ec438AE514bD019aDbb279512B982F55Bf40536");
         } else if (t_span === "icon-ripple") {
-            asignar("APORTE RIPPLE", "images/gc_img/ns_qr_ripple.png", "rGiS9AUfjgj5FBi9Z2PDZNwLbkarLihyGB");
+            asignar("APORTE XRP", "images/gc_img/ns_qr_ripple.png", "rGiS9AUfjgj5FBi9Z2PDZNwLbkarLihyGB");
         }
     }
     function closeModal(e) {
