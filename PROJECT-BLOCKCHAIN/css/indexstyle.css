@@ -149,6 +149,9 @@ html, body {
             width: 80%;
             margin: auto;
             text-align: justify; }
+            .container header nav.nav_movil ul.ul_movil > li > div p > span {
+              font-weight: bold;
+              font-size: 1.001rem; }
           .container header nav.nav_movil ul.ul_movil > li > div .internal_link {
             max-width: 400px;
             width: 80%;
@@ -307,15 +310,19 @@ html, body {
       width: 200px;
       font-size: 1em;
       margin-top: 60px; }
-      .container header .box_socialheader > div:first-child {
-        padding: 0 3px; }
       .container header .box_socialheader > div {
         border-radius: 50%;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.3); }
-        .container header .box_socialheader > div > span {
-          display: block;
-          padding: 10px; }
+        .container header .box_socialheader > div > a {
+          text-decoration: none;
+          color: white; }
+          .container header .box_socialheader > div > a > span {
+            display: block;
+            padding: 10px; }
+          .container header .box_socialheader > div > a span.icon-github {
+            padding: 8px;
+            font-size: 1.3rem; }
     .container header > h1 {
       position: relative;
       width: 40%;
@@ -528,6 +535,9 @@ html, body {
                 height: 380px;
                 color: black;
                 padding: 10px; }
+              .container section > article.blockchain > div.mainbox_author > ul li:nth-child(2) > p > span {
+                font-weight: bold;
+                font-size: 1.001rem; }
           .container section > article.blockchain > div.mainbox_author .box_coins > ul.coins {
             list-style: none;
             display: -webkit-box;

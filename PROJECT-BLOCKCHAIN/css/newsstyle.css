@@ -109,15 +109,19 @@ html, body {
       width: 200px;
       font-size: 1em;
       position: relative; }
-      .container header .socialheader div:first-child {
-        padding: 0 3px; }
       .container header .socialheader div {
         background-color: rgba(0, 0, 0, 0.3);
         margin: auto;
         border-radius: 50%; }
-        .container header .socialheader div span {
-          display: block;
-          padding: 10px; }
+        .container header .socialheader div > a {
+          text-decoration: none;
+          color: white; }
+          .container header .socialheader div > a > span {
+            display: block;
+            padding: 10px; }
+          .container header .socialheader div > a span.icon-github {
+            padding: 8px;
+            font-size: 1.3rem; }
     .container header .maintitle {
       text-align: center;
       position: relative;
