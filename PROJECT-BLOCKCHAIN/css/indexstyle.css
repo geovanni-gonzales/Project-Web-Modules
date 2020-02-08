@@ -320,7 +320,7 @@ html, body {
           .container header .box_socialheader > div > a > span {
             display: block;
             padding: 10px; }
-          .container header .box_socialheader > div > a span.icon-github {
+          .container header .box_socialheader > div > a .icon-github, .container header .box_socialheader > div > a .icon-reddit-alien {
             padding: 8px;
             font-size: 1.3rem; }
     .container header > h1 {
