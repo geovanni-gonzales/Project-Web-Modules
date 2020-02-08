@@ -1,0 +1,52 @@
+*, *::before, *::after, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  content: ""; }
+
+html, body {
+  font-family: 'Kanit', sans-serif; }
+
+form {
+  width: 450px;
+  margin: auto;
+  background: rgba(26, 116, 112, 0.4);
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 7px; }
+
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px; }
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px;
+  font-size: 17px;
+  border: none; }
+
+textarea {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+  min-width: 100%; }
+
+.error {
+  border: 2px solid red; }
+
+#submit {
+  background: #1a7470;
+  color: white;
+  padding: 20px; }
+
+#send:hover {
+  cursor: pointer;
+  background: #5c8f80; }
+
+@media screen and (max-width: 480px) {
+  form {
+    width: 100%; } }
