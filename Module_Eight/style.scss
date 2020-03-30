@@ -1,0 +1,49 @@
+*, *::before, *::after, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    content: "";
+}
+.container {
+    background-color: aqua;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    header{
+        background-color: blue;
+        height: 200px;
+        flex-shrink: 0;
+    }
+    section{
+        background-color: blueviolet;
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > div{
+            background-color: chartreuse;
+            width: 320px;
+            height: 320px;
+            & > h4{
+                width: 80px;
+                background-color: cyan; 
+                cursor: pointer;
+                span{
+                    margin-right: 5px;
+                }
+            }
+            & > h4.color{
+                background-color: chocolate;
+                span{
+                    background-color: crimson;
+                }
+            }
+        }
+     }   
+    
+    footer{ 
+        background-color: brown;
+        height: 100px;
+        flex-shrink: 0;
+    }    
+}
