@@ -65,9 +65,37 @@
                     height: 150px;
                     border-radius: 0 !important;
                 }
-                & > h2, & > div.qr, & > div.box_address{//directamenete si ocultamos la imagen al cargar no funciona para el primer click pero si apartir del segundo.
+                & > div.buttons{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    & > span.closeButton{
+                        background-color: rgba(0,0,0,.05);
+                        padding: .5px 15px;
+                        cursor: pointer;
+                        font-size: 1.1rem;
+                        border-radius: 3px;
+                    }
+                    & > h4{
+                        width: 80px;
+                        background-color: rgba(0,0,0,.05);
+                        cursor: pointer;
+                        font-size: .8rem;
+                        padding: 4px;
+                        border-radius: 3px;
+                        & > span.icon-copy{
+                            margin-right: 5px;
+                            font-weight: bold;
+                        }
+                    }
+                    & > .color{
+                        background-color: rgba(0, 0, 0, 0.25);
+                        color: white;
+                    }
+                }
+                & > h2, & > div.qr, & > div.box_address, & > div.buttons{//directamenete si ocultamos la imagen al cargar no funciona para el primer click pero si apartir del segundo.
                     visibility: hidden;
-                    margin: 10px;
+                    margin: 5px;
                 }
             }
             &.show{
@@ -80,7 +108,7 @@
                     height: 320px;
                     visibility: visible;
                     transition: width .3s, height .3s;
-                    & > h2, & > div.qr, & > div.box_address{
+                    & > h2, & > div.qr, & > div.box_address, & > div.buttons{
                         visibility: visible;
                         transition-delay: .3s;
                         color: rgba(0,0,0,.6);
@@ -189,7 +217,12 @@ $tertiaryWhite: white;
                 visibility: visible;
                 //background-color: rgba(255, 255, 255, 0.9);
                 background-color: white;
-                color: black;
+                //color: black;
+                //color: #5C8F80;
+                color: #23624F;
+                //color: #3B7865;
+                //color: #83A89D;
+                //color: #B9CFC8;
                 img#i_author{
                     opacity: 1;
                 }
@@ -214,7 +247,8 @@ $tertiaryWhite: white;
                     //font-weight: bold;
                     & > a{
                         text-decoration: none;
-                        color: black;
+                        color: #23624F;
+                        //color: black;
                     }
                 }
                 & > li{
@@ -316,7 +350,8 @@ $tertiaryWhite: white;
                     }
                     & > li > span:hover, & > li > img{
                         cursor: pointer;
-                        color: $rgb-secondary;
+                        color: black;
+                        //color: $rgb-secondary;
                     }
                     & > li > div.toggle_image{
                         background-color: rgba(0, 0, 0, .8);
@@ -519,6 +554,10 @@ $tertiaryWhite: white;
                 & > h2{
                     //width: 75%;
                 }
+                & > p:nth-child(4) > span{
+                font-style: italic;
+                    font-weight: bold;
+            }
                 & > div.mainbox_author{
                     //width: 300px;
                     //height: 450px;
@@ -556,10 +595,12 @@ $tertiaryWhite: white;
                     & > h3{
                         //text-align: center;
                         margin-top: 10px;
-                        color: #344e5a;
+                        //color: #344e5a;
+                        color: #83A89D;
                     }
                     & > p{
                         margin: 15px 0;
+                        color: #83A89D;
                         //text-align: justify;
                     }
                     /* & > p + p{
@@ -569,19 +610,19 @@ $tertiaryWhite: white;
                         list-style: none;
                         text-align: left;
                         & > li:not(:nth-child(2)) {
-                            //display: inline-block;
-                            //width: 48%;
-                            //font-size: 1.5rem;
                             padding: 5px;
                             margin: 5px 0;
-                            text-decoration: none;
-                            background-color: #e6eaee;
+                            text-decoration: none;          
+                            background-color: #E2EAE7;
+                            //background-color: #B9CFC8;
+                            //background-color: #e6eaee;
                             //transition: color 1s, background-color 1s;
-                            //color: transparent;
+                            & > p{
+                                color: #83A89D;
+                            }
                             & > a{
                                 text-decoration: none;
-                                color: #066b98;
-                                //color: 
+                                color: #83A89D;
                             }
                         }
                         //inicio del efecto acordion de la descripcion para web
@@ -603,12 +644,13 @@ $tertiaryWhite: white;
                             height: 0;
                             overflow: hidden;
                             color: transparent;
-                            background-color: #e6eaee;
+                            //background-color: #e6eaee;
+                            background-color: #E2EAE7;
                             transition-property: height, color, padding;
                             transition-duration: .5s, .8s, .5s;
                             &.toggle_desc{
                                 height: 380px;
-                                color: black;
+                                color: #23624F;
                                 padding: 10px;
                                 //height: auto;
                             }
@@ -662,7 +704,12 @@ $tertiaryWhite: white;
                 
                 &.h2{
                     visibility: visible;
-                    color: #066b98;
+                    //color: #066b98;
+                    //color: #5C8F80;
+                    //color: #23624F;
+                    //color: #3B7865;
+                    color: #83A89D;
+                    //color: #B9CFC8;
                     transform: translateX(0);
                     transition: all 1s;
                 }

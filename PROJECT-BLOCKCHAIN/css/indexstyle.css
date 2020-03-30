@@ -77,7 +77,7 @@ html, body {
       .container header nav.nav_movil.visible {
         visibility: visible;
         background-color: white;
-        color: black; }
+        color: #23624F; }
         .container header nav.nav_movil.visible img#i_author {
           opacity: 1; }
       .container header nav.nav_movil ul.ul_movil {
@@ -106,7 +106,7 @@ html, body {
           flex: auto; }
           .container header nav.nav_movil ul.ul_movil > li > a, .container header nav.nav_movil ul.ul_movil > li > ul > li > a {
             text-decoration: none;
-            color: black; }
+            color: #23624F; }
         .container header nav.nav_movil ul.ul_movil > li {
           padding: 2px;
           line-height: 50px; }
@@ -231,9 +231,35 @@ html, body {
                 width: 150px;
                 height: 150px;
                 border-radius: 0 !important; }
-              .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > h2, .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > div.qr, .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > div.box_address {
+              .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > div.buttons {
+                width: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: distribute;
+                justify-content: space-around; }
+                .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > div.buttons > span.closeButton {
+                  background-color: rgba(0, 0, 0, 0.05);
+                  padding: .5px 15px;
+                  cursor: pointer;
+                  font-size: 1.1rem;
+                  border-radius: 3px; }
+                .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > div.buttons > h4 {
+                  width: 80px;
+                  background-color: rgba(0, 0, 0, 0.05);
+                  cursor: pointer;
+                  font-size: .8rem;
+                  padding: 4px;
+                  border-radius: 3px; }
+                  .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > div.buttons > h4 > span.icon-copy {
+                    margin-right: 5px;
+                    font-weight: bold; }
+                .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > div.buttons > .color {
+                  background-color: rgba(0, 0, 0, 0.25);
+                  color: white; }
+              .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > h2, .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > div.qr, .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > div.box_address, .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal > div.coin > div.buttons {
                 visibility: hidden;
-                margin: 10px; }
+                margin: 5px; }
             .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal.show {
               visibility: visible;
               -webkit-transition-delay: .3s;
@@ -246,7 +272,7 @@ html, body {
                 -webkit-transition: width .3s, height .3s;
                 -o-transition: width .3s, height .3s;
                 transition: width .3s, height .3s; }
-                .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal.show > div.coin > h2, .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal.show > div.coin > div.qr, .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal.show > div.coin > div.box_address {
+                .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal.show > div.coin > h2, .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal.show > div.coin > div.qr, .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal.show > div.coin > div.box_address, .container header nav.nav_movil ul.ul_movil > li > div .box_coins > div.modal.show > div.coin > div.buttons {
                   visibility: visible;
                   -webkit-transition-delay: .3s;
                   -o-transition-delay: .3s;
@@ -283,7 +309,7 @@ html, body {
             display: block; }
           .container header nav.nav_movil ul.ul_movil > li > span:hover, .container header nav.nav_movil ul.ul_movil > li > img {
             cursor: pointer;
-            color: #1a7470; }
+            color: black; }
           .container header nav.nav_movil ul.ul_movil > li > div.toggle_image {
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
@@ -463,6 +489,9 @@ html, body {
                     }
                 }
                 */ }
+        .container section > article.blockchain > p:nth-child(4) > span {
+          font-style: italic;
+          font-weight: bold; }
         .container section > article.blockchain > div.mainbox_author {
           width: 350px;
           padding: 20px 20px 0;
@@ -495,9 +524,10 @@ html, body {
             display: inline-block; }
           .container section > article.blockchain > div.mainbox_author > h3 {
             margin-top: 10px;
-            color: #344e5a; }
+            color: #83A89D; }
           .container section > article.blockchain > div.mainbox_author > p {
-            margin: 15px 0; }
+            margin: 15px 0;
+            color: #83A89D; }
           .container section > article.blockchain > div.mainbox_author > ul {
             list-style: none;
             text-align: left;
@@ -506,10 +536,12 @@ html, body {
               padding: 5px;
               margin: 5px 0;
               text-decoration: none;
-              background-color: #e6eaee; }
+              background-color: #E2EAE7; }
+              .container section > article.blockchain > div.mainbox_author > ul > li:not(:nth-child(2)) > p {
+                color: #83A89D; }
               .container section > article.blockchain > div.mainbox_author > ul > li:not(:nth-child(2)) > a {
                 text-decoration: none;
-                color: #066b98; }
+                color: #83A89D; }
             .container section > article.blockchain > div.mainbox_author > ul li:first-child {
               cursor: pointer;
               color: #066b98; }
@@ -524,7 +556,7 @@ html, body {
               height: 0;
               overflow: hidden;
               color: transparent;
-              background-color: #e6eaee;
+              background-color: #E2EAE7;
               -webkit-transition-property: height, color, padding;
               -o-transition-property: height, color, padding;
               transition-property: height, color, padding;
@@ -533,7 +565,7 @@ html, body {
               transition-duration: .5s, .8s, .5s; }
               .container section > article.blockchain > div.mainbox_author > ul li:nth-child(2).toggle_desc {
                 height: 380px;
-                color: black;
+                color: #23624F;
                 padding: 10px; }
               .container section > article.blockchain > div.mainbox_author > ul li:nth-child(2) > p > span {
                 font-weight: bold;
@@ -599,9 +631,35 @@ html, body {
                 width: 150px;
                 height: 150px;
                 border-radius: 0 !important; }
-              .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > h2, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.qr, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.box_address {
+              .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.buttons {
+                width: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: distribute;
+                justify-content: space-around; }
+                .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.buttons > span.closeButton {
+                  background-color: rgba(0, 0, 0, 0.05);
+                  padding: .5px 15px;
+                  cursor: pointer;
+                  font-size: 1.1rem;
+                  border-radius: 3px; }
+                .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.buttons > h4 {
+                  width: 80px;
+                  background-color: rgba(0, 0, 0, 0.05);
+                  cursor: pointer;
+                  font-size: .8rem;
+                  padding: 4px;
+                  border-radius: 3px; }
+                  .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.buttons > h4 > span.icon-copy {
+                    margin-right: 5px;
+                    font-weight: bold; }
+                .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.buttons > .color {
+                  background-color: rgba(0, 0, 0, 0.25);
+                  color: white; }
+              .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > h2, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.qr, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.box_address, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal > div.coin > div.buttons {
                 visibility: hidden;
-                margin: 10px; }
+                margin: 5px; }
             .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show {
               visibility: visible;
               -webkit-transition-delay: .3s;
@@ -614,7 +672,7 @@ html, body {
                 -webkit-transition: width .3s, height .3s;
                 -o-transition: width .3s, height .3s;
                 transition: width .3s, height .3s; }
-                .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin > h2, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin > div.qr, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin > div.box_address {
+                .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin > h2, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin > div.qr, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin > div.box_address, .container section > article.blockchain > div.mainbox_author .box_coins > div.modal.show > div.coin > div.buttons {
                   visibility: visible;
                   -webkit-transition-delay: .3s;
                   -o-transition-delay: .3s;
@@ -647,7 +705,7 @@ html, body {
         color: white; }
         .container section > article > h2.h2 {
           visibility: visible;
-          color: #066b98;
+          color: #83A89D;
           -webkit-transform: translateX(0);
           -ms-transform: translateX(0);
           transform: translateX(0);
