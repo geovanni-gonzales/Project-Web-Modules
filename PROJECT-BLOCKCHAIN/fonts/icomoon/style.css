@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?4172t4');
-  src:  url('fonts/icomoon.eot?4172t4#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?4172t4') format('truetype'),
-    url('fonts/icomoon.woff?4172t4') format('woff'),
-    url('fonts/icomoon.svg?4172t4#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?brvsze');
+  src:  url('fonts/icomoon.eot?brvsze#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?brvsze') format('truetype'),
+    url('fonts/icomoon.woff?brvsze') format('woff'),
+    url('fonts/icomoon.svg?brvsze#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,53 +25,49 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-reddit-alien:before {
-  content: "\e910";
-}
-.icon-youtube:before {
+.icon-copy:before {
   content: "\e900";
 }
-.icon-bitcoin1:before {
+.icon-file_copy:before {
   content: "\e901";
 }
-.icon-reddit:before {
+.icon-security:before {
   content: "\e902";
 }
-.icon-github:before {
+.icon-youtube:before {
   content: "\e903";
 }
-.icon-facebook:before {
+.icon-reddit-alien:before {
   content: "\e904";
 }
-.icon-twitter:before {
+.icon-email:before {
   content: "\e905";
 }
 .icon-home:before {
   content: "\e906";
 }
-.icon-email:before {
+.icon-facebook:before {
   content: "\e907";
 }
-.icon-security:before {
+.icon-github:before {
   content: "\e908";
 }
-.icon-news:before {
+.icon-twitter:before {
   content: "\e909";
 }
-.icon-menu:before {
+.icon-news:before {
   content: "\e90a";
 }
-.icon-ripple:before {
+.icon-menu:before {
   content: "\e90b";
-  color: #0085c0;
-}
-.icon-xrp:before {
-  content: "\e90c";
-  color: #25a768;
 }
 .icon-monero:before {
-  content: "\e90d";
+  content: "\e90c";
   color: #f60;
+}
+.icon-xrp:before {
+  content: "\e90d";
+  color: #25a768;
 }
 .icon-ethereum:before {
   content: "\e90e";
