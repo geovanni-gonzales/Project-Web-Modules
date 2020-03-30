@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    var v, a, i, t, h, x, t2, h2, p, modal, ul_coins, u, div;
+    var v, a, i, t, h, x, t2, h2, p, modal, ul_coins, u, div, h4;
     function fixed() {
         //var posY = window.scrollY; alias de pageYOffset
         var posY, boton, heightHead;
@@ -68,7 +68,7 @@
         }
 
         if (t_span === "icon-bitcoin") {
-            asignar("APORTE BITCOIN", "../../images/gc_img/ns_qr_bitcoin.png", "bc1qxgnftcxnacn4m9zyre9xpwcl4ysgqzawfu7cxv");
+            asignar("APORTE BITCOIN", "../../images/gc_img/ns_qr_bitcoin_segwit.png", "32WKW5NChEnUjABgNeoMpa5ob2DZHvmMBJ");
         } else if (t_span === "icon-ethereum") {
             asignar("APORTE ETHERIUM", "../../images/gc_img/ns_qr_ethereum.png", "0x9Ec438AE514bD019aDbb279512B982F55Bf40536");
         } else if (t_span === "icon-xrp") {
@@ -76,11 +76,27 @@
         }
     }
     function closeModal(e) {
-        if (e.target.className === "modal show") {
+        if (e.target.className === "modal show" || e.target.className === "closeButton") {
             modal.setAttribute("class", "modal");
         }
     }
     //-------INICIO DEL MODAL----------
+    
+    //Funcion de los botones del MODAL
+    function copy(){
+        var textAdd;
+        textAdd = document.querySelector("div.box_address input#address");
+        textAdd.select();
+        document.execCommand("copy");
+        h4.setAttribute("class", "color");
+        h4.innerHTML = "<span class='icon-copy'></span>COPIED";
+        
+        setTimeout(function(){
+            h4.removeAttribute("class");
+            textAdd.blur();
+            h4.innerHTML = "<span class='icon-copy'></span>COPY";
+        },2000);    
+    }
     function execute() {
         document.getElementsByClassName("boton")[0].addEventListener("click", toggle);
         window.addEventListener("scroll", fixed);
@@ -105,6 +121,10 @@
         
         document.querySelector("div.box_coins").addEventListener("click", closeModal);
         //FIN DEL MODAL
+        
+        //Botones del MODAL
+        h4 = document.querySelector("div.buttons h4");
+        h4.addEventListener("click", copy);
     }
     window.addEventListener("load", execute);
 }());
